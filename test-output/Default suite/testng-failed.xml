@@ -5,9 +5,9 @@
     <classes>
       <class name="tests.Tests">
         <methods>
-          <include name="navigateToGoogleTest"/>
-          <include name="beforeClass"/>
-          <include name="afterTest"/>
+          <include name="setup"/>
+          <include name="LoginTest"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- tests.Tests -->
     </classes>

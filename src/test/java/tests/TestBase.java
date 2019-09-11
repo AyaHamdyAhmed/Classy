@@ -15,22 +15,20 @@ import org.testng.annotations.AfterClass;
 public class TestBase {
 	DriverManager driverManager;
 	WebDriver driver;
-	protected RespositoryParser parser;
-  @BeforeClass
-  public void setup() {
-	  driverManager = DriverManagerFactory.getDriverManager(DriverType.CHROME);
-	  try {
-		parser = new RespositoryParser("ObjectRepo.properties");
-	} catch (IOException e) {
-		e.printStackTrace();
-	}
-  }
 
-  @AfterClass
-  public void tearDown() {
-	  driver= driverManager.getWebDriver();
-	  driver.quit();
-	  
-  }
+	@BeforeClass
+	public void setup() {
+		driverManager = DriverManagerFactory.getDriverManager(DriverType.CHROME);
+
+	}
+
+	@AfterClass
+	public void tearDown() {
+		driver = driverManager.getWebDriver();
+		if (null != driver) {
+			driver.close();
+			driver.quit();
+		}
+	}
 
 }
