@@ -3,11 +3,8 @@ package tests;
 import Config.DriverManager;
 import Config.DriverManagerFactory;
 import Config.DriverType;
-import objectRepo.RespositoryParser;
 
 import org.testng.annotations.BeforeClass;
-
-import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
