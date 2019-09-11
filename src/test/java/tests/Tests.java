@@ -1,30 +1,28 @@
 package tests;
 
+import org.testng.annotations.Test;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+
+import pages.HomePage;
 import pages.LoginPage;
 
 public class Tests extends TestBase{
 	
 	WebDriver driver;
+	HomePage home;
 	LoginPage login;
-	String url= "https://login.classy.org/";
+	String url= "https://www.classy.org";
 	@BeforeMethod
 	public void navigation() {
 		driver= driverManager.getWebDriver();
+		home= new HomePage(driver);
 		login= new LoginPage(driver);
-		login.goTo(url);
+		home.goToUrl(url);
 	}
   @Test
-  public void LoginTest() {
-	  
-	 // driver.get("https://login.classy.org/");
-	 // WebElement UserName = driver.findElement(parser.getbjectLocator("UserName"));
-	  //WebElement Password = driver.findElement(parser.getbjectLocator("Password"));
-	  //UserName.sendKeys("dhalawa@classy.org");
-	  //Password.sendKeys("12345678@A");
-	 // Assert.assertEquals(driver.getTitle(), "Google");
+  public void CreateNewDonationPageTest() {
+	  home.openLoginPage();
 	  login.Login("dhalawa@classy.org", "12345678@A");
 	  
   }
