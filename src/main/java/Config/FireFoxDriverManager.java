@@ -8,5 +8,6 @@ public class FireFoxDriverManager extends DriverManager {
 	public void createWebDriver() {
 		FirefoxOptions options = new FirefoxOptions();
 		this.driver = new FirefoxDriver(options);
+		driver.manage().window().maximize();
 	}
 }

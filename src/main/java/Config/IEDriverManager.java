@@ -8,5 +8,6 @@ public class IEDriverManager extends DriverManager {
 	public void createWebDriver() {
 		InternetExplorerOptions options = new InternetExplorerOptions();
 		this.driver = new InternetExplorerDriver(options);
+		driver.manage().window().maximize();
 	}
 }

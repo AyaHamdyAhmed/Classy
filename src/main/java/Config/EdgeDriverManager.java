@@ -8,5 +8,6 @@ public class EdgeDriverManager extends DriverManager {
 	public void createWebDriver() {
 		EdgeOptions options = new EdgeOptions();
 		this.driver = new EdgeDriver(options);
+		driver.manage().window().maximize();
 	}
 }
