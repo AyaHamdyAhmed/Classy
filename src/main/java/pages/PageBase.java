@@ -1,5 +1,6 @@
 package pages;
 
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -21,6 +22,14 @@ public class PageBase {
 	protected WebDriver driver;
 	private WebDriverWait wait;
 
+	protected void Initialize() {
+		try {
+			parser = new RespositoryParser("application.properties");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
 	protected void waitForElementToAppear(WebDriver driver, By locator) {
 		wait = new WebDriverWait(driver, TIMEOUT, POLLING);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
@@ -39,14 +48,23 @@ public class PageBase {
 	protected void ClickOnElement(WebDriver driver, By locator) {
 		waitForElementToBeInteractable(driver, locator);
 		driver.findElement(locator).click();
-	
+
 	}
 
 	protected void clickOnElementByJavaScript(WebDriver driver, WebElement elem) {
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", elem);
 	}
-	
+
 	protected void implicitWaitUntilLoad(WebDriver driver) {
-		driver.manage().timeouts().implicitlyWait(SHORTWAIT,TimeUnit.SECONDS) ;
+		driver.manage().timeouts().implicitlyWait(SHORTWAIT, TimeUnit.SECONDS);
+	}
+
+	protected void implicitWaitUntilLoadWithLongWait(WebDriver driver) {
+		driver.manage().timeouts().implicitlyWait(LONGWAIT, TimeUnit.SECONDS);
+	}
+
+	protected void SendkeysToElemnent(WebDriver driver, By locator, String key) {
+		//waitForElementToAppear(driver, locator);
+		driver.findElement(locator).sendKeys(key);
 	}
 }
