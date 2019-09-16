@@ -1,10 +1,7 @@
 package pages;
 
 import java.io.IOException;
-
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-
 import objectRepo.RespositoryParser;
 
 public class LoginPage extends PageBase {
@@ -39,8 +36,7 @@ public class LoginPage extends PageBase {
 
 	private void ClickLogin() {
 		ClickOnElement(driver, parser.getbjectLocator("SignIN"));
-		//waitForElementToBeInteractable(driver, parser.getbjectLocator("SignIN"));
-		//driver.findElement(parser.getbjectLocator("SignIN")).sendKeys(Keys.ENTER);
+		implicitWaitUntilLoad(driver);
 	}
 
 
