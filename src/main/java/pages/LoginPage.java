@@ -1,8 +1,6 @@
 package pages;
 
-import java.io.IOException;
 import org.openqa.selenium.WebDriver;
-import objectRepo.RespositoryParser;
 
 public class LoginPage extends PageBase {
 //variables 
@@ -15,11 +13,7 @@ public class LoginPage extends PageBase {
 	}
 
 	public void Login(String userName, String pass) {
-		try {
-			parser = new RespositoryParser("application.properties");
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		Initialize();
 		SetUserName(userName);
 		SetPassword(pass);
 		ClickLogin();
@@ -38,6 +32,5 @@ public class LoginPage extends PageBase {
 		ClickOnElement(driver, parser.getbjectLocator("SignIN"));
 		implicitWaitUntilLoad(driver);
 	}
-
 
 }
