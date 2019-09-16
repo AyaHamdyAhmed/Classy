@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeMethod;
 
 import pages.AdminDashBoard;
+import pages.CampaignPage;
+import pages.CampaignSetupPage;
 import pages.HomePage;
 import pages.LoginPage;
 
@@ -14,6 +16,8 @@ public class Tests extends TestBase{
 	HomePage home;
 	LoginPage login;
 	AdminDashBoard admin;
+	CampaignPage campaign;
+	CampaignSetupPage cSetup;
 	String url= "https://www.classy.org";
 	@BeforeMethod
 	public void navigation() {
@@ -21,6 +25,8 @@ public class Tests extends TestBase{
 		home= new HomePage(driver);
 		login= new LoginPage(driver);
 		admin= new AdminDashBoard(driver);
+		campaign= new CampaignPage(driver);
+		cSetup = new CampaignSetupPage(driver);
 		home.goToUrl(url);
 	}
   @Test
@@ -28,6 +34,8 @@ public class Tests extends TestBase{
 	  home.openLoginPage();
 	  login.Login("dhalawa@classy.org", "12345678@A");
 	  admin.OpenCampaignDashBoard();
+	  campaign.createNewCampaign();
+	  cSetup.SetUpCampaignData("TestDonation", "10000");
 	  
   }
 }
