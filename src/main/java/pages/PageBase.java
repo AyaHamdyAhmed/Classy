@@ -15,6 +15,7 @@ public class PageBase {
 	private static final int TIMEOUT = 5;
 	private static final int POLLING = 100;
 	private static final int LONGWAIT = 10000;
+	private static final int SHORTWAIT = 3000;
 	protected RespositoryParser parser;
 
 	protected WebDriver driver;
@@ -46,6 +47,6 @@ public class PageBase {
 	}
 	
 	protected void implicitWaitUntilLoad(WebDriver driver) {
-		driver.manage().timeouts().implicitlyWait(1000,TimeUnit.SECONDS) ;
+		driver.manage().timeouts().implicitlyWait(SHORTWAIT,TimeUnit.SECONDS) ;
 	}
 }
