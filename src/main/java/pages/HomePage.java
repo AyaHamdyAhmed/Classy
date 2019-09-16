@@ -1,8 +1,6 @@
 package pages;
 
-import java.io.IOException;
 import org.openqa.selenium.WebDriver;
-import objectRepo.RespositoryParser;
 
 public class HomePage extends PageBase {
 
@@ -16,11 +14,7 @@ public class HomePage extends PageBase {
 	}
 
 	public void openLoginPage() {
-		try {
-			parser = new RespositoryParser("application.properties");
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		Initialize();
 		findHomeLoginBtn();
 	}
 
