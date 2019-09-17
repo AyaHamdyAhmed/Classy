@@ -1,6 +1,7 @@
 package pages;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -66,5 +67,9 @@ public class PageBase {
 	protected void SendkeysToElemnent(WebDriver driver, By locator, String key) {
 		//waitForElementToAppear(driver, locator);
 		driver.findElement(locator).sendKeys(key);
+	}
+	protected void SwitchToNewTab(WebDriver driver) {
+		 ArrayList<String> tabs2 = new ArrayList<String> (driver.getWindowHandles());
+		    driver.switchTo().window(tabs2.get(1));
 	}
 }
