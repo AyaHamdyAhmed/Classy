@@ -39,6 +39,6 @@ public class CampaignSetupPage extends PageBase {
 		for (int i = 0; i < 3; i++) {
 			clickOnElementByJavaScript(driver, elem);
 		}
-		implicitWaitUntilLoadWithLongWait(driver);
+		//implicitWaitUntilLoadWithLongWait(driver);
 	}
 }
