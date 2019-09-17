@@ -32,7 +32,7 @@ public class Tests extends TestBase{
   @Test
   public void CreateNewDonationPageTest() {
 	  home.openLoginPage();
-	  login.Login("dhalawa@classy.org", "12345678@A");
+	  login.Login("", "");
 	  admin.OpenCampaignDashBoard();
 	  campaign.createNewCampaign();
 	  cSetup.SetUpCampaignData("TestDonation", "10000");
