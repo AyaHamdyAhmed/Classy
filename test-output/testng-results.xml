@@ -1,87 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-09-17T08:05:19Z" name="Default suite" finished-at="2019-09-17T08:05:46Z" duration-ms="26791">
+  <suite started-at="2019-09-17T08:56:50Z" name="Default suite" finished-at="2019-09-17T08:57:19Z" duration-ms="28588">
     <groups>
     </groups>
-    <test started-at="2019-09-17T08:05:19Z" name="Default test" finished-at="2019-09-17T08:05:46Z" duration-ms="26791">
+    <test started-at="2019-09-17T08:56:50Z" name="Default test" finished-at="2019-09-17T08:57:19Z" duration-ms="28588">
       <class name="tests.Tests">
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.Tests@609cd4d8]" started-at="2019-09-17T08:05:19Z" name="setup" finished-at="2019-09-17T08:05:19Z" duration-ms="8" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.Tests@609cd4d8]" started-at="2019-09-17T08:56:50Z" name="setup" finished-at="2019-09-17T08:56:50Z" duration-ms="8" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="navigation()[pri:0, instance:tests.Tests@609cd4d8]" started-at="2019-09-17T08:05:19Z" name="navigation" finished-at="2019-09-17T08:05:28Z" duration-ms="8757" status="PASS">
+        <test-method is-config="true" signature="navigation()[pri:0, instance:tests.Tests@609cd4d8]" started-at="2019-09-17T08:56:50Z" name="navigation" finished-at="2019-09-17T08:57:00Z" duration-ms="9520" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- navigation -->
-        <test-method signature="CreateNewDonationPageTest()[pri:0, instance:tests.Tests@609cd4d8]" started-at="2019-09-17T08:05:28Z" name="CreateNewDonationPageTest" finished-at="2019-09-17T08:05:45Z" duration-ms="17270" status="FAIL">
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
-            <message>
-              <![CDATA[element click intercepted: Element <a class="admin-button__primary aquamarine ng-binding ng-scope ng-isolate-scope" data-ng-click="isClicked.next = true" sc-submit-form="editForm, createForm, ticketForm, editForm__theme" element-scope="'#body-content'" data-analytics-label="...(top)" ng-disabled="form.disabled" ng-bind="formSubmitText()" disabled="disabled">Next Step</a> is not clickable at point (1339, 348). Other element would receive the click: <div class="admin-button_hard-disable ng-scope" data-ng-show="form.disabled" style=""></div>
-  (Session info: chrome=76.0.3809.132)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'EG-AAREF', ip: '10.200.200.87', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.132, chrome: {chromedriverVersion: 75.0.3770.90 (a6dcaf7e3ec6f..., userDataDir: C:\Users\AYA~1.ARE\AppData\...}, goog:chromeOptions: {debuggerAddress: localhost:51928}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: ba8c89c9f5e13c94d988e6a63aaa1456]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a class="admin-button__primary aquamarine ng-binding ng-scope ng-isolate-scope" data-ng-click="isClicked.next = true" sc-submit-form="editForm, createForm, ticketForm, editForm__theme" element-scope="'#body-content'" data-analytics-label="...(top)" ng-disabled="form.disabled" ng-bind="formSubmitText()" disabled="disabled">Next Step</a> is not clickable at point (1339, 348). Other element would receive the click: <div class="admin-button_hard-disable ng-scope" data-ng-show="form.disabled" style=""></div>
-  (Session info: chrome=76.0.3809.132)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'EG-AAREF', ip: '10.200.200.87', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.132, chrome: {chromedriverVersion: 75.0.3770.90 (a6dcaf7e3ec6f..., userDataDir: C:\Users\AYA~1.ARE\AppData\...}, goog:chromeOptions: {debuggerAddress: localhost:51928}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: ba8c89c9f5e13c94d988e6a63aaa1456
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-at pages.PageBase.ClickOnElement(PageBase.java:51)
-at pages.CampaignSetupPage.openThemePage(CampaignSetupPage.java:38)
-at pages.CampaignSetupPage.SetUpCampaignData(CampaignSetupPage.java:19)
-at tests.Tests.CreateNewDonationPageTest(Tests.java:38)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+        <test-method signature="CreateNewDonationPageTest()[pri:0, instance:tests.Tests@609cd4d8]" started-at="2019-09-17T08:57:00Z" name="CreateNewDonationPageTest" finished-at="2019-09-17T08:57:18Z" duration-ms="18295" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CreateNewDonationPageTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.Tests@609cd4d8]" started-at="2019-09-17T08:05:45Z" name="tearDown" finished-at="2019-09-17T08:05:46Z" duration-ms="742" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.Tests@609cd4d8]" started-at="2019-09-17T08:57:18Z" name="tearDown" finished-at="2019-09-17T08:57:19Z" duration-ms="750" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
