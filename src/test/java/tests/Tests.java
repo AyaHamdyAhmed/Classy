@@ -18,7 +18,7 @@ public class Tests extends TestBase{
 	AdminDashBoard admin;
 	CampaignPage campaign;
 	CampaignSetupPage cSetup;
-	String url= "https://www.classy.org";
+	String url= "https://staging.stayclassy.org";
 	@BeforeMethod
 	public void navigation() {
 		driver= driverManager.getWebDriver();
