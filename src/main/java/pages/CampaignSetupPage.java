@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class CampaignSetupPage extends PageBase {
+	WebElement elem;
+
 	public CampaignSetupPage(WebDriver driver) {
 		this.driver = driver;
 	}
@@ -27,14 +29,15 @@ public class CampaignSetupPage extends PageBase {
 	}
 
 	private void ClickNextStep() {
-		WebElement elem= driver.findElement(parser.getbjectLocator("NextButn"));
+		elem = driver.findElement(parser.getbjectLocator("NextButn"));
 		clickOnElementByJavaScript(driver, elem);
-		//ClickOnElement(driver, parser.getbjectLocator("NextButn"));
+		// ClickOnElement(driver, parser.getbjectLocator("NextButn"));
 	}
 
 	private void openThemePage() {
-		ClickOnElement(driver, parser.getbjectLocator("ThemeNextBtn"));
-		ClickOnElement(driver, parser.getbjectLocator("ThemeNextBtn"));
-		ClickOnElement(driver, parser.getbjectLocator("ThemeNextBtn"));
+		elem = driver.findElement(parser.getbjectLocator("ThemeNextBtn"));
+		for (int i = 0; i < 3; i++) {
+			clickOnElementByJavaScript(driver, elem);
+		}
 	}
 }
