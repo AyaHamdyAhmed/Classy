@@ -17,7 +17,6 @@ public class CampaignSetupPage extends PageBase {
 		InsertFundRaisingGoal(Fgoal);
 		ClickNextStep();
 		openThemePage();
-
 	}
 
 	private void InsertCampaignName(String CName) {
@@ -31,14 +30,17 @@ public class CampaignSetupPage extends PageBase {
 	private void ClickNextStep() {
 		elem = driver.findElement(parser.getbjectLocator("NextButn"));
 		clickOnElementByJavaScript(driver, elem);
-		// ClickOnElement(driver, parser.getbjectLocator("NextButn"));
 	}
 
 	private void openThemePage() {
-		elem = driver.findElement(parser.getbjectLocator("ThemeNextBtn"));
+
 		for (int i = 0; i < 3; i++) {
+			implicitWaitUntilLoad(driver);
+			elem = driver.findElement(parser.getbjectLocator("SkipBtn"));
+			LongWait();
+			waitForElementToBeInteractable(driver, parser.getbjectLocator("SkipBtn"));
 			clickOnElementByJavaScript(driver, elem);
+			LongWait();
 		}
-		//implicitWaitUntilLoadWithLongWait(driver);
 	}
 }
