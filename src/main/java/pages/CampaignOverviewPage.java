@@ -14,29 +14,43 @@ public class CampaignOverviewPage extends PageBase {
 
 	public void publishCampaign() {
 		Initialize();
-		SwitchToNewTab(driver);
 		clickPublishCamapaign();
 		clickPublishFromPopup();
+		implicitWaitUntilLoadWithLongWait(driver);
+		LongWait();
+		AssertThatCampaignisPublished();
 	}
 
 	private void clickPublishCamapaign() {
-		ClickOnElement(driver, parser.getbjectLocator("PublishBtn"));
+		elem=driver.findElement(parser.getbjectLocator("PublishBtn"));
+		waitForElementToAppear(driver,parser.getbjectLocator("PublishBtn"));
+		clickOnElementByJavaScript(driver, elem);
 		implicitWaitUntilLoad(driver);
 	}
 
 	private void clickPublishFromPopup() {
 		elem = driver.findElement(parser.getbjectLocator("PublishPopup"));
 		clickOnElementByJavaScript(driver, elem);
-		implicitWaitUntilLoadWithLongWait(driver);
 	}
 	
-	/*public void AssertThatCampaignisPublished() {
+	public void AssertThatCampaignisPublished() {
 		elem = driver.findElement(parser.getbjectLocator("PublishBtn"));
 		assertEquals(elem.getText(), "Unpublish");
 		
-	}*/
+	}
 	public void AssertThatMenuItemisChanged() {
+		Initialize();
 	   elem = driver.findElement(parser.getbjectLocator("PreViewMenu"));
-	   assertEquals(elem.getText(), "View");
+	   assertEquals(elem.getText(), "VIEW");
+	}
+	/*public void assertThatCamapignPublished(String url) {
+		assertEquals(driver.getCurrentUrl().replaceAll("[0-9]", ""), url);
+	}*/
+
+	public void AssertThatcampaignisnotpublished() {
+		Initialize();
+		 elem = driver.findElement(parser.getbjectLocator("PreViewMenu"));
+		   assertEquals(elem.getText(), "PREVIEW");
+		
 	}
 }
