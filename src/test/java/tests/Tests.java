@@ -33,14 +33,14 @@ public class Tests extends TestBase{
 		home.goToUrl(url);
 	}
   @Test
-  public void CreateNewDonationPageTest() {
+  public void CreateNewDonationPageTest(){
 	  home.openLoginPage();
 	  login.Login("dhalawa@classy.org", "12345678@A");
 	  admin.OpenCampaignDashBoard();
 	  campaign.createNewCampaign();
 	  cSetup.SetUpCampaignData("TestDonation", "10000");
+	  cOverview.AssertThatcampaignisnotpublished();
 	  cOverview.publishCampaign();
-	  cOverview.AssertThatMenuItemisChanged();
 	  
   }
 }
