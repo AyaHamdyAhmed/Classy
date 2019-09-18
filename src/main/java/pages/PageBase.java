@@ -15,7 +15,7 @@ import objectRepo.RespositoryParser;
 
 public class PageBase {
 	private static final int TIMEOUT = 5;
-	private static final int POLLING = 100;
+	private static final int POLLING = 1000;
 	private static final int LONGWAIT = 10000;
 	private static final int SHORTWAIT = 3000;
 	protected RespositoryParser parser;
@@ -34,6 +34,7 @@ public class PageBase {
 	protected void waitForElementToAppear(WebDriver driver, By locator) {
 		wait = new WebDriverWait(driver, TIMEOUT, POLLING);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+		
 	}
 
 	protected void waitForElementToDisappear(WebDriver driver, By locator) {
@@ -70,6 +71,16 @@ public class PageBase {
 	}
 	protected void SwitchToNewTab(WebDriver driver) {
 		 ArrayList<String> tabs2 = new ArrayList<String> (driver.getWindowHandles());
+		    driver.close();
 		    driver.switchTo().window(tabs2.get(1));
+	}
+	protected void LongWait() {
+		
+			try {
+				Thread.sleep(POLLING);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		
 	}
 }
