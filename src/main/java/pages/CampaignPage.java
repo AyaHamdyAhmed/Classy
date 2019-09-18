@@ -18,14 +18,12 @@ public class CampaignPage extends PageBase {
 		implicitWaitUntilLoad(driver);
 		WebElement elem = driver.findElement(parser.getbjectLocator("CreateNew"));
 		clickOnElementByJavaScript(driver, elem);
-		// ClickOnElement(driver, parser.getbjectLocator("CreateNew"));
 	}
 
 	private void ClickOnDonationItem() {
 		implicitWaitUntilLoad(driver);
 		WebElement elem = driver.findElement(parser.getbjectLocator("DonationListItem"));
 		clickOnElementByJavaScript(driver, elem);
-		//ClickOnElement(driver, parser.getbjectLocator("DonationListItem"));
 		implicitWaitUntilLoadWithLongWait(driver);
 	}
 }
