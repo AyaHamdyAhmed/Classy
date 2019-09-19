@@ -1,8 +1,12 @@
 package tests;
 
 import org.testng.annotations.Test;
+
+import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 
 import pages.AdminDashBoard;
 import pages.CampaignOverviewPage;
@@ -10,6 +14,7 @@ import pages.CampaignPage;
 import pages.CampaignSetupPage;
 import pages.HomePage;
 import pages.LoginPage;
+import data.ExcelReader;
 
 public class Tests extends TestBase{
 	
@@ -32,15 +37,23 @@ public class Tests extends TestBase{
 		cOverview = new CampaignOverviewPage(driver);
 		home.goToUrl(url);
 	}
-  @Test
-  public void CreateNewDonationPageTest(){
+	  @DataProvider
+		public Object[][] DP() throws IOException {
+			 ExcelReader reader = new ExcelReader();
+		      return reader.getExcelData();
+		}
+	  
+  @Test(dataProvider = "DP")
+  public void CreateNewDonationPageTest(String userName, String password, String CName, String Fgoal){
 	  home.openLoginPage();
-	  login.Login("dhalawa@classy.org", "12345678@A");
+	  login.Login(userName,password);
 	  admin.OpenCampaignDashBoard();
 	  campaign.createNewCampaign();
-	  cSetup.SetUpCampaignData("TestDonation", "10000");
+	  cSetup.SetUpCampaignData(CName,Fgoal);
 	  cOverview.AssertThatcampaignisnotpublished();
 	  cOverview.publishCampaign();
 	  
   }
+  
+
 }
