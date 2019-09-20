@@ -10,11 +10,12 @@ public class CampaignSetupPage extends PageBase {
 		this.driver = driver;
 	}
 
-	public void SetUpCampaignData(String CName, String Fgoal) {
+	public void SetUpCampaignData() {
 		Initialize();
+		initializeData();
 		SwitchToNewTab(driver);
-		InsertCampaignName(CName);
-		InsertFundRaisingGoal(Fgoal);
+		InsertCampaignName(dataparser.getData("CamapaignName"));
+		InsertFundRaisingGoal(dataparser.getData("FundGoal"));
 		ClickNextStep();
 		openThemePage();
 	}
