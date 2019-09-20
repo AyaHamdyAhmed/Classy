@@ -12,10 +12,11 @@ public class LoginPage extends PageBase {
 		this.driver = driver;
 	}
 
-	public void Login(String userName, String pass) {
+	public void Login() {
 		Initialize();
-		SetUserName(userName);
-		SetPassword(pass);
+		initializeData();
+		SetUserName(dataparser.getData("UserName"));
+		SetPassword(dataparser.getData("Password"));
 		ClickLogin();
 
 	}
