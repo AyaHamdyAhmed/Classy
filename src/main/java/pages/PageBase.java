@@ -11,6 +11,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import objectRepo.DataParser;
 import objectRepo.RespositoryParser;
 
 public class PageBase {
@@ -19,6 +20,7 @@ public class PageBase {
 	private static final int LONGWAIT = 10000;
 	private static final int SHORTWAIT = 3000;
 	protected RespositoryParser parser;
+	protected DataParser dataparser;
 
 	protected WebDriver driver;
 	private WebDriverWait wait;
@@ -26,6 +28,13 @@ public class PageBase {
 	protected void Initialize() {
 		try {
 			parser = new RespositoryParser("application.properties");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	protected void initializeData() {
+		try {
+			dataparser = new DataParser("TestData.properties");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
