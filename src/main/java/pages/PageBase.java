@@ -92,4 +92,13 @@ public class PageBase {
 			}
 		
 	}
+	protected void LonglongWait() {
+		
+		try {
+			Thread.sleep(LONGWAIT);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	
+}
 }
