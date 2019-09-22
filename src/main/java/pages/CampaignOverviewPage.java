@@ -18,12 +18,12 @@ public class CampaignOverviewPage extends PageBase {
 		clickPublishFromPopup();
 		implicitWaitUntilLoadWithLongWait(driver);
 		LonglongWait();
-		//AssertThatCampaignisPublished();
+		// AssertThatCampaignisPublished();
 	}
 
 	private void clickPublishCamapaign() {
-		elem=driver.findElement(parser.getbjectLocator("PublishBtn"));
-		waitForElementToAppear(driver,parser.getbjectLocator("PublishBtn"));
+		elem = driver.findElement(parser.getbjectLocator("PublishBtn"));
+		waitForElementToAppear(driver, parser.getbjectLocator("PublishBtn"));
 		clickOnElementByJavaScript(driver, elem);
 		implicitWaitUntilLoad(driver);
 	}
@@ -32,25 +32,27 @@ public class CampaignOverviewPage extends PageBase {
 		elem = driver.findElement(parser.getbjectLocator("PublishPopup"));
 		clickOnElementByJavaScript(driver, elem);
 	}
-	
+
 	public void AssertThatCampaignisPublished() {
 		elem = driver.findElement(parser.getbjectLocator("PublishBtn"));
 		assertEquals(elem.getText(), "Unpublish");
-		
+
 	}
+
 	public void AssertThatMenuItemisChanged() {
 		Initialize();
-	   elem = driver.findElement(parser.getbjectLocator("PreViewMenu"));
-	   assertEquals(elem.getText(), "VIEW");
+		elem = driver.findElement(parser.getbjectLocator("PreViewMenu"));
+		assertEquals(elem.getText(), "VIEW");
 	}
-	/*public void assertThatCamapignPublished(String url) {
-		assertEquals(driver.getCurrentUrl().replaceAll("[0-9]", ""), url);
-	}*/
+	/*
+	 * public void assertThatCamapignPublished(String url) {
+	 * assertEquals(driver.getCurrentUrl().replaceAll("[0-9]", ""), url); }
+	 */
 
 	public void AssertThatcampaignisnotpublished() {
 		Initialize();
-		 elem = driver.findElement(parser.getbjectLocator("PreViewMenu"));
-		   assertEquals(elem.getText(), "PREVIEW");
-		
+		elem = driver.findElement(parser.getbjectLocator("PreViewMenu"));
+		assertEquals(elem.getText(), "PREVIEW");
+
 	}
 }

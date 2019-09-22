@@ -32,6 +32,7 @@ public class PageBase {
 			e.printStackTrace();
 		}
 	}
+
 	protected void initializeData() {
 		try {
 			dataparser = new DataParser("TestData.properties");
@@ -43,7 +44,7 @@ public class PageBase {
 	protected void waitForElementToAppear(WebDriver driver, By locator) {
 		wait = new WebDriverWait(driver, TIMEOUT, POLLING);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-		
+
 	}
 
 	protected void waitForElementToDisappear(WebDriver driver, By locator) {
@@ -75,30 +76,33 @@ public class PageBase {
 	}
 
 	protected void SendkeysToElemnent(WebDriver driver, By locator, String key) {
-		//waitForElementToAppear(driver, locator);
+		// waitForElementToAppear(driver, locator);
 		driver.findElement(locator).sendKeys(key);
 	}
+
 	protected void SwitchToNewTab(WebDriver driver) {
-		 ArrayList<String> tabs2 = new ArrayList<String> (driver.getWindowHandles());
-		    driver.close();
-		    driver.switchTo().window(tabs2.get(1));
+		ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
+		driver.close();
+		driver.switchTo().window(tabs2.get(1));
 	}
+
 	protected void LongWait() {
-		
-			try {
-				Thread.sleep(POLLING);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-		
+
+		try {
+			Thread.sleep(POLLING);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
 	}
+
 	protected void LonglongWait() {
-		
+
 		try {
 			Thread.sleep(LONGWAIT);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-	
-}
+
+	}
 }

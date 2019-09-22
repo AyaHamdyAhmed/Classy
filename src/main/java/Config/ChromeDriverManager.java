@@ -9,6 +9,6 @@ public class ChromeDriverManager extends DriverManager {
 		ChromeOptions options = new ChromeOptions();
 		this.driver = new ChromeDriver(options);
 		driver.manage().window().maximize();
-		
+
 	}
 }

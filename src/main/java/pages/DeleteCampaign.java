@@ -52,7 +52,7 @@ public class DeleteCampaign extends PageBase {
 		elem = driver.findElement(parser.getbjectLocator("DeleteForEverPopup"));
 		clickOnElementByJavaScript(driver, elem);
 	}
-	
+
 	private void AssertSuccessfulDeletionOfCampaign() {
 		assertEquals(driver.getCurrentUrl(), "https://www.classy.org/admin/17799/activity");
 	}
