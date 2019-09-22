@@ -12,6 +12,7 @@ import pages.AdminDashBoard;
 import pages.CampaignOverviewPage;
 import pages.CampaignPage;
 import pages.CampaignSetupPage;
+import pages.DeleteCampaign;
 import pages.HomePage;
 import pages.LoginPage;
 //import data.ExcelReader;
@@ -25,6 +26,7 @@ public class Tests extends TestBase{
 	CampaignPage campaign;
 	CampaignSetupPage cSetup;
 	CampaignOverviewPage cOverview;
+	DeleteCampaign cDelete;
 	String url= "https://www.classy.org";
 	@BeforeMethod
 	public void navigation() {
@@ -35,10 +37,11 @@ public class Tests extends TestBase{
 		campaign= new CampaignPage(driver);
 		cSetup = new CampaignSetupPage(driver);
 		cOverview = new CampaignOverviewPage(driver);
+		cDelete = new DeleteCampaign(driver);
 		home.goToUrl(url);
 	}
 	@Test
-  public void CreateNewDonationPageTest(){
+	public void CreateNewDonationPageTest(){
 	  home.openLoginPage();
 	  login.Login();
 	  admin.OpenCampaignDashBoard();
@@ -46,7 +49,7 @@ public class Tests extends TestBase{
 	  cSetup.SetUpCampaignData();
 	  cOverview.AssertThatcampaignisnotpublished();
 	  cOverview.publishCampaign();
-	  
+	  cDelete.clearCreatedCampaigns();
   }
   
 
