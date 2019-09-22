@@ -17,7 +17,7 @@ public class CampaignOverviewPage extends PageBase {
 		clickPublishCamapaign();
 		clickPublishFromPopup();
 		implicitWaitUntilLoadWithLongWait(driver);
-		LongWait();
+		LonglongWait();
 		//AssertThatCampaignisPublished();
 	}
 
