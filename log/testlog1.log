@@ -1,0 +1,24 @@
+2019-09-29 13:55:11,194 [main] INFO pages.LoginPage - UserName Entered
+2019-09-29 13:55:11,360 [main] INFO pages.LoginPage - Password Entered
+2019-09-29 13:55:17,043 [main] INFO pages.LoginPage - Login Clicked
+2019-09-29 16:43:56,518 [main] INFO pages.HomePage - URL redirected
+2019-09-29 16:43:56,659 [main] INFO pages.HomePage - Login page is oppened
+2019-09-29 16:43:59,473 [main] INFO pages.LoginPage - UserName Entered
+2019-09-29 16:43:59,539 [main] INFO pages.LoginPage - Password Entered
+2019-09-29 16:44:05,210 [main] INFO pages.LoginPage - Login Clicked and Admin DashBoard Is oppened
+2019-09-29 16:44:06,806 [main] INFO pages.AdminDashBoard - campaign tab is clicked
+2019-09-29 16:44:06,810 [main] INFO pages.AdminDashBoard - campaign page is openned
+2019-09-29 16:44:07,625 [main] INFO pages.CampaignPage - Create New drob down is oppened
+2019-09-29 16:44:07,715 [main] INFO pages.CampaignPage - donation item list is selected
+2019-09-29 16:44:07,722 [main] INFO pages.CampaignPage - Camapign setup page is oppened
+2019-09-29 16:44:08,812 [main] INFO pages.CampaignSetupPage - new tab is oppend
+2019-09-29 16:44:14,845 [main] INFO pages.CampaignSetupPage - Camapign Name is Entered
+2019-09-29 16:44:14,960 [main] INFO pages.CampaignSetupPage - Campaign Goal is Entered
+2019-09-29 16:44:15,004 [main] INFO pages.CampaignSetupPage - Next Step button is clicked
+2019-09-29 16:44:18,714 [main] INFO pages.CampaignSetupPage - skip button is clicked
+2019-09-29 16:44:20,830 [main] INFO pages.CampaignSetupPage - skip button is clicked
+2019-09-29 16:44:31,835 [main] INFO pages.CampaignSetupPage - skip button is clicked
+2019-09-29 16:44:31,947 [main] ERROR pages.PageBase - publish button is clicked
+2019-09-29 16:44:31,956 [main] INFO pages.PageBase - puplish popup is appeared
+2019-09-29 16:44:31,985 [main] INFO pages.PageBase - confirm publish campaign is clicked
+2019-09-29 16:44:43,406 [main] INFO pages.PageBase - data genereted by test is cleaned
