@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-09-26T09:04:01Z" name="Default suite" finished-at="2019-09-26T09:05:06Z" duration-ms="65132">
+  <suite started-at="2019-09-29T14:43:46Z" name="Default suite" finished-at="2019-09-29T14:44:56Z" duration-ms="69920">
     <groups>
     </groups>
-    <test started-at="2019-09-26T09:04:01Z" name="Default test" finished-at="2019-09-26T09:05:06Z" duration-ms="65132">
+    <test started-at="2019-09-29T14:43:46Z" name="Default test" finished-at="2019-09-29T14:44:56Z" duration-ms="69920">
       <class name="tests.Tests">
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.Tests@609cd4d8]" started-at="2019-09-26T09:04:01Z" name="setup" finished-at="2019-09-26T09:04:01Z" duration-ms="8" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.Tests@7d8704ef]" started-at="2019-09-29T14:43:46Z" name="setup" finished-at="2019-09-29T14:43:46Z" duration-ms="11" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="navigation()[pri:0, instance:tests.Tests@609cd4d8]" started-at="2019-09-26T09:04:01Z" name="navigation" finished-at="2019-09-26T09:04:09Z" duration-ms="7880" status="PASS">
+        <test-method is-config="true" signature="navigation()[pri:0, instance:tests.Tests@7d8704ef]" started-at="2019-09-29T14:43:46Z" name="navigation" finished-at="2019-09-29T14:43:56Z" duration-ms="10319" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- navigation -->
-        <test-method signature="CreateNewDonationPageTest()[pri:0, instance:tests.Tests@609cd4d8]" started-at="2019-09-26T09:04:09Z" name="CreateNewDonationPageTest" finished-at="2019-09-26T09:05:03Z" duration-ms="54336" status="PASS">
+        <test-method signature="CreateNewDonationPageTest()[pri:0, instance:tests.Tests@7d8704ef]" started-at="2019-09-29T14:43:56Z" name="CreateNewDonationPageTest" finished-at="2019-09-29T14:44:53Z" duration-ms="56897" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CreateNewDonationPageTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.Tests@609cd4d8]" started-at="2019-09-26T09:05:03Z" name="tearDown" finished-at="2019-09-26T09:05:06Z" duration-ms="2894" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.Tests@7d8704ef]" started-at="2019-09-29T14:44:53Z" name="tearDown" finished-at="2019-09-29T14:44:56Z" duration-ms="2673" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
