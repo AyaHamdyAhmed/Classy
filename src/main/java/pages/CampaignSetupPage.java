@@ -25,8 +25,17 @@ public class CampaignSetupPage extends PageBase {
 	}
 
 	private void InsertCampaignName(String CName) {
-		SendkeysToElemnent(driver, parser.getbjectLocator("Campaignname"), CName);
-		logger.info("Camapign Name is Entered");
+		try {
+			if (CName != null) {
+				SendkeysToElemnent(driver, parser.getbjectLocator("Campaignname"), CName);
+				logger.info("Camapign Name is Entered");
+			} else {
+				logger.error("campaign name is empty");
+			}
+		} catch (Exception e) {
+			logger.error("something want wrong", e);
+			//driver.close();
+		}
 	}
 
 	private void InsertFundRaisingGoal(String Fgoal) {
@@ -35,21 +44,33 @@ public class CampaignSetupPage extends PageBase {
 	}
 
 	private void ClickNextStep() {
-		elem = driver.findElement(parser.getbjectLocator("NextButn"));
-		clickOnElementByJavaScript(driver, elem);
-		logger.info("Next Step button is clicked");
+		try {
+			
+			elem = driver.findElement(parser.getbjectLocator("NextButn"));
+			clickOnElementByJavaScript(driver, elem);
+			 
+			//ClickOnElement(driver, parser.getbjectLocator("NextButn"));
+			logger.info("Next Step button is clicked");
+		} catch (Exception e) {
+			logger.error("something went wrong! ", e);
+			//driver.close();
+		}
 	}
 
 	private void openThemePage() {
-
-		for (int i = 0; i < 3; i++) {
-			implicitWaitUntilLoad(driver);
-			elem = driver.findElement(parser.getbjectLocator("SkipBtn"));
-			LongWait();
-			waitForElementToBeInteractable(driver, parser.getbjectLocator("SkipBtn"));
-			clickOnElementByJavaScript(driver, elem);
-			LongWait();
+		try {
+			for (int i = 0; i < 3; i++) {
+				implicitWaitUntilLoad(driver);
+				elem = driver.findElement(parser.getbjectLocator("SkipBtn"));
+				LongWait();
+				waitForElementToBeInteractable(driver, parser.getbjectLocator("SkipBtn"));
+				clickOnElementByJavaScript(driver, elem);
+				LongWait();
+			}
 			logger.info("skip button is clicked");
+		} catch (Exception e) {
+			logger.error("can't locate an element", e);
+			//driver.close();
 		}
 	}
 }
