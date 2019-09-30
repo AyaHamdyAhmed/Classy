@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Default suite" parallel="methods" verbose="3">
+	<test name="Allure reporting with TestNG tests" skipfailedinvocationcounts="false">
+		<classes>
+			<class
+				name="tests.Tests">
+				<methods>
+					<include name="CreateNewDonationPageTest" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
