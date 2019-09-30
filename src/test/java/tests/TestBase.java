@@ -25,6 +25,8 @@ public class TestBase {
 		if (null != driver) {
 			driver.close();
 			driver.quit();
+		}else {
+			System.out.println("driver is closed");
 		}
 	}
 
