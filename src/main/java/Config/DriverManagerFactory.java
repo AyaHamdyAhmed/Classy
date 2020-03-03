@@ -9,10 +9,13 @@ public class DriverManagerFactory {
 			break;
 		case FIREFOX:
 			driverManager = new FireFoxDriverManager();
+			break;
 		case EDGE:
 			driverManager = new EdgeDriverManager();
+			break;
 		case IE:
 			driverManager = new IEDriverManager();
+			break;
 		default:
 			driverManager = new ChromeDriverManager();
 			break;

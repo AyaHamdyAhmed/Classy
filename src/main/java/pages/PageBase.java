@@ -162,7 +162,7 @@ public class PageBase {
 			e.printStackTrace();
 		}
 	}
-	public void LogConfig() {
+	protected void LogConfig() {
 		PropertyConfigurator.configure("Log4j.properties");
 	}
 }
